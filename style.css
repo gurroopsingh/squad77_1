@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#hero {
+    background: lightblue;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure it spans the full width */
+    padding: 0 20px; /* Prevents text from touching edges */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+section {
+    padding: 20px;
+}
+
+.mentors-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    max-width: 900px; /* Adjust as needed */
+    margin: auto;
+}
+
+/* Team list styling */
+#team-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    max-width: 900px; /* Ensures cards are arranged in rows */
+    margin: auto; /* Centers the container */
+}
+
+#team-list div {
+    width: 100%; /* Makes sure cards take full width of their grid cell */
+    min-width: 200px; /* Prevents collapsing on smaller screens */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mentors-container, #team-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mentors-container, #team-list {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
